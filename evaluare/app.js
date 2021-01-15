@@ -60,11 +60,11 @@ let studenti = [
 // console.table(studenti);
 // function media(arr){
 //     for(i = 0; i < arr.length; i++){
-//         for(j = 0; j < )
+//         for(j = 0; j < arr[].length){
+//             console.log(i,j);
+//         }
 //     }
 // }
-// studenti.values.
-
 //2.3
 let styles = ["Jazz", "Blues"];
 styles.push("Rock-n-Roll");
@@ -76,11 +76,11 @@ console.log(styles);
 
 
 function sumInputNumbers(ar){
-alert("itroduceti numere!");
+alert("itroduceti numere! Pentru stop introduceti un caracter text!");
 let isEnd = true;
 while(isEnd){
     let val = prompt('introduceti numarul: ')
-    if(val === 0 || val > 0 || val < 0){
+    if(val == 0 || val > 0 || val < 0){
         ar.push(val);
     }
     else{
@@ -91,4 +91,11 @@ console.log(ar);
 }
 let sm = [];
 sumInputNumbers(sm);
-//
+
+//2.6
+
+let m = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+m.splice(4, 1, 0, 0, 0);
+
+console.log(m);
