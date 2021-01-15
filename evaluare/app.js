@@ -56,11 +56,38 @@ let studenti = [
     {name: "5-th", marks: [8,5,9,10,7]},{name: "6-th", marks: [8,6,9,10,7]},
     {name: "7-th", marks: [8,6,9,10,7]},{name: "8-th", marks: [4,5,4,4,4]}
 ]
-console.log(studenti);
-console.table(studenti);
+// console.log(studenti);
+// console.table(studenti);
 // function media(arr){
 //     for(i = 0; i < arr.length; i++){
 //         for(j = 0; j < )
 //     }
 // }
-// let rez = studenti.map( () => studenti.)
+// studenti.values.
+
+//2.3
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
+styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+styles.unshift("Rap", "Reggae");
+console.log(styles);
+
+//2.4
+
+
+function sumInputNumbers(ar){
+alert("itroduceti numere!");
+let isEnd = true;
+while(isEnd){
+    let val = prompt('introduceti numarul: ')
+    if(val === 0 || val > 0 || val < 0){
+        ar.push(val);
+    }
+    else{
+        isEnd = false;
+    }
+}
+console.log(ar);
+}
+let sm = [];
+sumInputNumbers(sm);
