@@ -49,83 +49,108 @@
 // let newMassiv = masiv.map(masiv => masiv * 1.05);
 // console.log(newMassiv);
 
-//2
-// let studenti = [
-//     {name: "First", marks: [9,6,9,10,7]},{name: "Second", marks: [8,6,9,5,7]},
-//     {name: "Thrid", marks: [8,10,8,10,7]},{name: "4-th", marks: [8,6,7,10,5]},
-//     {name: "5-th", marks: [8,5,9,10,7]},{name: "6-th", marks: [7,6,9,10,7]},
-//     {name: "7-th", marks: [8,6,4,10,7]},{name: "8-th", marks: [4,5,3,5,4]}
-// ];
-// function calcMedia(arr) {
-//     let total = 0;
-//     let media = 0;
-//     for(let i = 0; i <= arr.length - 1; i++){
-//         console.log('numele: ' + arr[i].name);
-//         for(let j = 0; j <= arr[i].marks.length - 1; j++){
-//             total += arr[i].marks[j];
-//             if(j == arr[i].marks.length - 1){
-//                 media = total / arr[i].marks.length;
-//             }
-//         }
-//         console.log('nota medie este de: ' + media);
-//         arr[i].marks.unshift(media);
-//         total = 0;
-//     }
-// }
-// calcMedia(studenti);
-// function noteMinime(arr) {
-//     console.log('Elevi cu medie mai mica de 5: ');
-//     for(let i = 0; i <= arr.length - 1; i++){
-//             if(arr[i].marks[0] < 5){
-//                 console.log('numele: ' + arr[i].name);
-//                 console.log('nota medie este de: ' + arr[i].marks[0]);
-//             }
-//     }
-// }
-// function minMax(arr) {
-//     console.log('Cea mai mare si cea mai mica nota: ');
-//     let max = 0;
-//     let min = 10;
-//     let name = '';
-//     for(let i = 0; i <= arr.length - 1; i++){
-//         for(let j = 0; j <= arr[i].marks.length - 1; j++){
-//             let currentValue = arr[i].marks[0];
-//             if(currentValue > max){
-//                 max = currentValue;
-//                 name = arr[i].name;
-//             }
-//         }
-//     }
-//     console.log('Cea mai mare medie: ' + name + ' ' +max);
-//     for(let i = 0; i <= arr.length - 1; i++){
-//         for(let j = 0; j <= arr[i].marks.length - 1; j++){
-//             let currentValue = arr[i].marks[0];
-//             if(currentValue < min){
-//                 max = currentValue;
-//                 name = arr[i].name;
-//             }
-//         }
-//     }
-//     console.log('Cea mai mica medie: ' + name + ' ' +max);
-// }
-// function descSort(arr) {
-//     console.log('De la mic la mare: ');
-//     arr.sort(function(a, b){
-//         if(a.marks < b.marks){
-//             return 1;
-//         }
-//         if(a.marks > b.marks){
-//             return -1;
-//         }
-//         return 0;
-//     })
-//     for(let i = 0; i <= arr.length - 1; i++){
-//         console.log('numele: ' + arr[i].name);
-//         console.log('nota medie este de: ' + arr[i].marks[0]);
-//         }
-//     }
-// console.log(" ");
-// descSort(studenti);
+2
+let studenti = [
+    {name: "First", marks: [9,6,9,10,7]},{name: "Second", marks: [8,6,9,5,7]},
+    {name: "Thrid", marks: [8,10,8,10,7]},{name: "4-th", marks: [8,6,7,10,5]},
+    {name: "5-th", marks: [8,5,9,10,7]},{name: "6-th", marks: [7,6,9,10,7]},
+    {name: "7-th", marks: [8,6,4,10,7]},{name: "8-th", marks: [4,5,3,5,4]}
+];
+function calcMedia(arr) {
+    let total = 0;
+    let media = 0;
+    for(let i = 0; i <= arr.length - 1; i++){
+        console.log('numele: ' + arr[i].name);
+        for(let j = 0; j <= arr[i].marks.length - 1; j++){
+            total += arr[i].marks[j];
+            if(j == arr[i].marks.length - 1){
+                media = total / arr[i].marks.length;
+            }
+        }
+        console.log('nota medie este de: ' + media);
+        arr[i].marks.unshift(media);
+        total = 0;
+    }
+}
+calcMedia(studenti);
+function noteMinime(arr) {
+    console.log('Elevi cu medie mai mica de 5: ');
+    for(let i = 0; i <= arr.length - 1; i++){
+            if(arr[i].marks[0] < 5){
+                console.log('numele: ' + arr[i].name);
+                console.log('nota medie este de: ' + arr[i].marks[0]);
+            }
+    }
+}
+function minMax(arr) {
+    console.log('Cea mai mare si cea mai mica nota: ');
+    let max = 0;
+    let min = 10;
+    let name = '';
+    for(let i = 0; i <= arr.length - 1; i++){
+        for(let j = 0; j <= arr[i].marks.length - 1; j++){
+            let currentValue = arr[i].marks[0];
+            if(currentValue > max){
+                max = currentValue;
+                name = arr[i].name;
+            }
+        }
+    }
+    console.log('Cea mai mare medie: ' + name + ' ' +max);
+    for(let i = 0; i <= arr.length - 1; i++){
+        for(let j = 0; j <= arr[i].marks.length - 1; j++){
+            let currentValue = arr[i].marks[0];
+            if(currentValue < min){
+                max = currentValue;
+                name = arr[i].name;
+            }
+        }
+    }
+    console.log('Cea mai mica medie: ' + name + ' ' +max);
+}
+function descSort(arr) {
+    console.log('De la mic la mare: ');
+    arr.sort(function(a, b){
+        if(a.marks < b.marks){
+            return 1;
+        }
+        if(a.marks > b.marks){
+            return -1;
+        }
+        return 0;
+    })
+    for(let i = 0; i <= arr.length - 1; i++){
+        console.log('numele: ' + arr[i].name);
+        console.log('nota medie este de: ' + arr[i].marks[0]);
+        }
+    }
+console.log(" ");
+function higherThanAll(arr) {
+    let totalMarks = 0;
+    let totalAverage = 0;
+    arr.sort(function(a, b){
+        if(a.marks < b.marks){
+            return 1;
+        }
+        if(a.marks > b.marks){
+            return -1;
+        }
+        return 0;
+    })
+    for(let i = 0; i <= arr.length - 1; i++){
+            let currentValue = arr[i].marks[0];
+            totalMarks += currentValue;
+        }
+        totalAverage = totalMarks / arr.length;
+        console.log('Media clasei este de: ' + totalAverage.toPrecision(3));
+    for(let i = 0; i <= arr.length - 1; i++){
+        if(arr[i].marks[0] > totalAverage){
+            console.log('numele: ' + arr[i].name);
+            console.log('nota medie este mai mare decat media clasei: ' + arr[i].marks[0]);
+        }
+    }
+    }
+higherThanAll(studenti);
 //2.3
 // let styles = ["Jazz", "Blues"];
 // styles.push("Rock-n-Roll");
