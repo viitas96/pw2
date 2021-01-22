@@ -11,18 +11,18 @@
     //     document.body.style.backgroundColor = "yellow";
 // })
 //7.4
-setInterval(() => {
-    
-}, 2000);
-window.onload=function(){
 
+
+window.onload=function(){
     for(let i = 0; i <= 20; i++){
         el = document.createElement('li');
         if(i % 2 == 0){
-            el.innerHTML = 'Par';
+            el.innerHTML = 'Par ' + i;
+            el.classList.add("class-red");
         }
         else{
-            el.innerHTML = 'Impar';
+            el.innerHTML = 'Impar ' + i;
+            el.classList.add("class-blue");
         }
         document.getElementById('MyUl').appendChild(el);
     }
