@@ -34,5 +34,13 @@ console.log(person);
 
 // 10.1
 // https://jsoneditoronline.org/#left=cloud.9dd3c9e59f814a6f9381e31d93ccdc60
-
+// 11.1
+  
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("textArea").value = localStorage.getItem("textArea");
+});
+function localFunction(val) {
+    const textArea = document.getElementById("textArea").value;
+    localStorage.setItem("textArea", textArea);
+  }
 
