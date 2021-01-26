@@ -42,5 +42,32 @@ document.addEventListener("DOMContentLoaded", () => {
 function localFunction(val) {
     const textArea = document.getElementById("textArea").value;
     localStorage.setItem("textArea", textArea);
-  }
+}
 
+// 6.8
+
+function translate(arr) {
+    let x = 0;
+    for (i in arr) {
+            arr.Mo = "luni";
+            arr.Tu = "marti";
+            arr.We = "miercuri";
+            arr.Th = "joi";
+            arr.Fr = "vineri";
+            arr.Sa = "sambata";
+            arr.Su = "duminica";
+        console.log(arr[i]);
+    }
+}
+
+const weekDays = {
+	"Mo": "Понедельник",
+	"Tu": "Вторник",
+	"We": "Среда",
+	"Th": "Четверг",
+	"Fr": "Пятница",
+	"Sa": "Суббота",
+	"Su": "Воскресенье",
+}
+
+translate(weekDays);
